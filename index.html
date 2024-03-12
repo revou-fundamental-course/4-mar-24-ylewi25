@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BMI Calculator</title>
+    <link rel="stylesheet" href="/4-mar-24-ylewi25/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+  </head>
+  <body>
+    <!-- TITLE AREA -->
+    <div class="whole">
+      <!-- INPUT AREA -->
+      <div class="input-area">
+        <div class="content-container">
+          <h1 class="title">Kalkulator BMI</h1>
+          <p class="description">
+            Berat badan ideal adalah impian semua orang. Tidak hanya memiliki
+            bentuk tubuh yang menunjang penampilan, berat badan ideal juga
+            menandakan kondisi tubuh yang sehat. Bagaimana denganmu? Yuk, hitung
+            sekarang di kalkulator BMI.
+          </p>
+        </div>
+        <!-- CALCULATION BOX -->
+        <div class="calculation">
+          <h4 class="calc-subtitle">Jenis Kelamin</h4>
+          <form action="" class="gender">
+            <input
+              type="radio"
+              checked="checked"
+              id="pria"
+              value="pria"
+              name="gender"
+            />
+            <label for="pria">Pria</label><br />
+            <input type="radio" id="wanita" value="wanita" name="gender" />
+            <label for="wanita">Wanita</label>
+          </form>
+          <h4 class="calc-subtitle">Berat Badan (kg)</h4>
+          <div class="input-number">
+            <span class="material-symbols-outlined"> ink_pen </span>
+            <input placeholder="Masukan Berat Badan Anda" type="number" id="mass" name="mass" onkeypress="return event.charCode >= 46" min="0" required />
+          </div>
+          <h4 class="calc-subtitle">Usia (tahun)</h4>
+          <div class="input-number">
+            <span class="material-symbols-outlined"> ink_pen </span>
+            <input placeholder="Masukan Usia Anda" type="number" id="age" name="age" onkeypress="return event.charCode >= 46" min="0" required />
+          </div>
+          <div class="height-unit">
+              <h4 class="calc-subtitle">Tinggi Badan (<span class="unit-info"></span>)</h4>
+              <select name="unit" id="unit">
+                <option value="cm">centimeter</option>
+                <option value="m">meter</option>
+              </select>
+          </div>
+          <div class="input-number">
+            <span class="material-symbols-outlined"> ink_pen </span>
+            <input placeholder="Masukan Tinggi Badan Anda" type="number" id="body-height" name="body-height" onkeypress="return event.charCode >= 46" min="0" required />
+          </div>
+          <div class="calc-button">
+            <button class="button">Hitung BMI</button>
+            <button class="reset">Reset</button>
+          </div>
+        </div>
+        <!-- DESCRIPTION BELOW CALCULATION -->
+        <div class="content-container">
+          <h2>Keunggulan Fitur</h2>
+          <ol class="benefit">
+            <li>Menghitung berat badan</li>
+            <li>Menentukan kategori berat badan ideal atau tidak</li>
+            <li>Mempersiapkan program penurunan berat badan</li>
+          </ol>
+          <p class="description">
+            Kalkulator ini hanya boleh digunakan oleh orang dewasa (wanita hamil
+            atau menyusui tidak boleh mengandalkan pembacaan BMI ini) dan tidak
+            ada tindakan yang harus diambil berdasarkan nilainya selain
+            berkonsultasi dengan orang yang memenuhi syarat seperti dokter.
+          </p>
+          <p class="description">
+            Kalkulator akan memberi Anda gambaran tentang perbandingan berat
+            badan Anda dengan nilai umum. Indeks Massa Tubuh (atau BMI) dihitung
+            sebagai berat badan Anda (dalam kilogram) dibagi dengan kuadrat
+            tinggi badan Anda (dalam meter) atau BMI = Kg/m<sup>2</sup>.
+          </p>
+        </div>
+      </div>
+
+      <!-- RESULT AREA -->
+      <div class="result-area">
+        <h2 class="result-title">Hasil</h2>
+        <p class="subject-desc"></p>
+        <p class="result-opening"></p>
+        <p class="index-result"></p>
+        <p class="index-scale"></p>
+        <p class="index-description"></p>
+        <p class="how-to"></p>
+        <p class="if-you"></p>
+        <p class="additional-info"></p>
+        <p class="desease-more">
+          Beberapa penyakit yang berasal dari kelebihan berat badan :
+          <ul class="li-more">
+              <li>Diabetes</li>
+              <li>Hipertensi</li>
+              <li>Sakit Jantung</li>
+              <li>Osteoarthritis</li>
+          </ul>
+        </p>
+        <p class="desease-less">
+          Beberapa penyakit yang berasal dari kekurangan berat badan :
+          <ul class="li-less">
+              <li>Malnutrisi</li>
+              <li>Turunnya Fungsi Kekebalan Tubuh</li>
+              <li>Risiko Komplikasi Pasca Operasi</li>
+              <li>Infertilitas</li>
+          </ul>
+        </p>
+        <a class="howto-doit" target="_blank" href="https://www.siloamhospitals.com/informasi-siloam/artikel/cara-menaikkan-berat-badan" class="btn-less">Menaikan Berat Badan</a>
+        <a class="howto-doit" target="_blank" href="https://www.siloamhospitals.com/informasi-siloam/artikel/diet-untuk-menurunkan-berat-badan" class="btn-more">Menurunkan Berat Badan</a>
+        <a class="howto-doit" target="_blank" href="https://ayosehat.kemkes.go.id/5-langkah-efektif-untuk-menjaga-berat-badan" class="btn-ideal">Menjaga Badan Tetap Ideal</a>
+        <div class="loader"></div>
+      </div>
+    </div>
+    <div class="overlay close"></div>
+    <div class="popUp-container">
+      <div class="popUp">
+        <p>Lengkapi Data Berat Badan, Usia dan Tinggi Badan Anda terlebih dahulu.</p>
+        <button class="popup-remove">OK</button>
+      </div>
+    </div>
+    <script src="/4-mar-24-ylewi25/script.js"></script>
+  </body>
+</html>
