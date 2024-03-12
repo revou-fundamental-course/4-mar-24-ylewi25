@@ -126,6 +126,9 @@ reset.addEventListener('click', () => {
     age.value = "";
     bodyHeight.value = "";
     pria.checked = true;
+    unit.value = "cm";
+
+    changeOption();
 })
 
 function round(value, precision) {
